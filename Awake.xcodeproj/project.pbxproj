@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC7EA5C7A0044386AAC9887A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3D0446255544FB9D878A9E /* main.swift */; };
+		C56961DCBFBE4676BAAFBF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF3A1A8D7374A6893325781 /* AppDelegate.swift */; };
+		0879904E5967476BBCB11253 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7883F49FF94A76BDAA43CC /* StatusItemController.swift */; };
+		78308ADDB32C4EB69BE14222 /* PowerAssertionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA482A55E1465394D07241 /* PowerAssertionManager.swift */; };
+		E572B229792E4EAD8FCBEA48 /* SystemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939411793E454F79ADD1C93F /* SystemActions.swift */; };
+		6F04530A45224C6D8D59091F /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9591939234AE8BC37725E /* LaunchAtLogin.swift */; };
+		B2E4C8A19F0D4E6B8C7A5D31 /* AwakeSessionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */; };
+		991A895F165F4741B45B39C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131596785054428B831064AF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C3D0446255544FB9D878A9E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6FF3A1A8D7374A6893325781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F7883F49FF94A76BDAA43CC /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		A1AA482A55E1465394D07241 /* PowerAssertionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerAssertionManager.swift; sourceTree = "<group>"; };
+		939411793E454F79ADD1C93F /* SystemActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemActions.swift; sourceTree = "<group>"; };
+		52D9591939234AE8BC37725E /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		C25C93C631674A35AA7BAA3B /* Awake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78576D2B611F409388E5D501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755F2B6F268D4A94A4099BD0 /* Awake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awake.entitlements; sourceTree = "<group>"; };
+		131596785054428B831064AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwakeSessionTimer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37470E1B341141BCA0829D90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3116851207DF4B77B5BF7B9200 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				D8442C882DC3429193EBDDC1 /* Awake */,
+				C25C93C631674A35AA7BAA3B00 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8442C882DC3429193EBDDC1 /* Awake */ = {
+			isa = PBXGroup;
+			children = (
+				7C3D0446255544FB9D878A9E /* main.swift */,
+				6FF3A1A8D7374A6893325781 /* AppDelegate.swift */,
+				4F7883F49FF94A76BDAA43CC /* StatusItemController.swift */,
+				A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */,
+				A1AA482A55E1465394D07241 /* PowerAssertionManager.swift */,
+				939411793E454F79ADD1C93F /* SystemActions.swift */,
+				52D9591939234AE8BC37725E /* LaunchAtLogin.swift */,
+				131596785054428B831064AF /* Assets.xcassets */,
+				78576D2B611F409388E5D501 /* Info.plist */,
+				755F2B6F268D4A94A4099BD0 /* Awake.entitlements */,
+			);
+			path = Awake;
+			sourceTree = "<group>";
+		};
+		C25C93C631674A35AA7BAA3B00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C25C93C631674A35AA7BAA3B /* Awake.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C965F5EE9AA5413B80A917A7 /* Awake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8D7FE4CE9B246BE980A0E6B /* Build configuration list for PBXNativeTarget "Awake" */;
+			buildPhases = (
+				43D54926491F4EC2B1038E6F /* Sources */,
+				37470E1B341141BCA0829D90 /* Frameworks */,
+				2318BE9AAD0A43D2A40A41D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Awake;
+			productName = Awake;
+			productReference = C25C93C631674A35AA7BAA3B /* Awake.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3116851207DF4B77B5BF7B92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = FE73CB78378F4121B1F2CFC9 /* Build configuration list for PBXProject "Awake" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3116851207DF4B77B5BF7B9200 /* Root */;
+			productRefGroup = C25C93C631674A35AA7BAA3B00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C965F5EE9AA5413B80A917A7 /* Awake */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2318BE9AAD0A43D2A40A41D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991A895F165F4741B45B39C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D54926491F4EC2B1038E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC7EA5C7A0044386AAC9887A /* main.swift in Sources */,
+				C56961DCBFBE4676BAAFBF4E /* AppDelegate.swift in Sources */,
+				0879904E5967476BBCB11253 /* StatusItemController.swift in Sources */,
+				B2E4C8A19F0D4E6B8C7A5D31 /* AwakeSessionTimer.swift in Sources */,
+				78308ADDB32C4EB69BE14222 /* PowerAssertionManager.swift in Sources */,
+				E572B229792E4EAD8FCBEA48 /* SystemActions.swift in Sources */,
+				6F04530A45224C6D8D59091F /* LaunchAtLogin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A0D38402974E446FB016B4AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		944A589D28014DA6AB55FD8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F86D88139DC84332A6361A8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Awake/Awake.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Awake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.awake.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FCD2E0EDAD414BD595ABDA84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Awake/Awake.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Awake/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.awake.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE73CB78378F4121B1F2CFC9 /* Build configuration list for PBXProject "Awake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D38402974E446FB016B4AE /* Debug */,
+				944A589D28014DA6AB55FD8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8D7FE4CE9B246BE980A0E6B /* Build configuration list for PBXNativeTarget "Awake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86D88139DC84332A6361A8E /* Debug */,
+				FCD2E0EDAD414BD595ABDA84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3116851207DF4B77B5BF7B92 /* Project object */;
+}

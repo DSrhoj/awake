@@ -1,0 +1,35 @@
+# Xcode / Swift
+build/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Packaging outputs
+dist/
+Awake.app/
+*.dmg
+*.zip
+!docs/**
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors / agents
+.idea/
+.vscode/
+*.swp
+*~
+.cursor/
