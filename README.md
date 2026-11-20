@@ -27,6 +27,8 @@ Awake creates short-lived [power assertions](https://developer.apple.com/library
 
 **Other**
 
+- **Disable Mission Control Swipe** — temporarily turns off 3- and 4-finger Mission Control (and App Exposé) trackpad swipes; restores on toggle-off or quit
+- **With Keep Awake** (under Mission Control) — optional: auto-disable the swipe whenever Keep Awake is on, and restore when it turns off (default: manual)
 - Launch at Login
 - Menu bar only (no Dock icon) — `LSUIElement`
 - Menu bar icon: half-closed eye when idle, open eye while an override is active
@@ -65,6 +67,8 @@ Click the eye icon in the menu bar:
 | System Awake / Display Awake | Toggle each assertion independently |
 | Turn Off After | Choose how long overrides stay on |
 | Lock Screen / Sleep Display / Sleep Mac | Immediate system actions |
+| Disable Mission Control Swipe | Temporarily disable 3- and 4-finger Mission Control swipes |
+| With Keep Awake | If checked, Mission Control swipe follows Keep Awake automatically |
 | Launch at Login | Register or unregister via `SMAppService` |
 | Quit Awake | Releases overrides and exits |
 
@@ -73,6 +77,7 @@ Click the eye icon in the menu bar:
 | Piece | Role |
 |-------|------|
 | `PowerAssertionManager` | `IOPMAssertionCreateWithName` for system and display idle sleep |
+| `MissionControlGestureOverride` | Snapshot/restore trackpad + Dock prefs for Mission Control swipes |
 | `AwakeSessionTimer` | Optional auto-off countdown |
 | `StatusItemController` | Menu bar UI and icon state |
 | `SystemActions` | Lock / sleep via private lock API or `pmset` |

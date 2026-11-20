@@ -14,6 +14,7 @@
 		E572B229792E4EAD8FCBEA48 /* SystemActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939411793E454F79ADD1C93F /* SystemActions.swift */; };
 		6F04530A45224C6D8D59091F /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9591939234AE8BC37725E /* LaunchAtLogin.swift */; };
 		B2E4C8A19F0D4E6B8C7A5D31 /* AwakeSessionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */; };
+		D4F1A2B3C4D54E6F8A9B0C1D /* MissionControlGestureOverride.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D04E1F2A3B4C5D /* MissionControlGestureOverride.swift */; };
 		991A895F165F4741B45B39C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131596785054428B831064AF /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		755F2B6F268D4A94A4099BD0 /* Awake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Awake.entitlements; sourceTree = "<group>"; };
 		131596785054428B831064AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwakeSessionTimer.swift; sourceTree = "<group>"; };
+		E5F6A7B8C9D04E1F2A3B4C5D /* MissionControlGestureOverride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionControlGestureOverride.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				4F7883F49FF94A76BDAA43CC /* StatusItemController.swift */,
 				A8F3D2C14B9E4A7F9E6C2D80 /* AwakeSessionTimer.swift */,
 				A1AA482A55E1465394D07241 /* PowerAssertionManager.swift */,
+				E5F6A7B8C9D04E1F2A3B4C5D /* MissionControlGestureOverride.swift */,
 				939411793E454F79ADD1C93F /* SystemActions.swift */,
 				52D9591939234AE8BC37725E /* LaunchAtLogin.swift */,
 				131596785054428B831064AF /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				0879904E5967476BBCB11253 /* StatusItemController.swift in Sources */,
 				B2E4C8A19F0D4E6B8C7A5D31 /* AwakeSessionTimer.swift in Sources */,
 				78308ADDB32C4EB69BE14222 /* PowerAssertionManager.swift in Sources */,
+				D4F1A2B3C4D54E6F8A9B0C1D /* MissionControlGestureOverride.swift in Sources */,
 				E572B229792E4EAD8FCBEA48 /* SystemActions.swift in Sources */,
 				6F04530A45224C6D8D59091F /* LaunchAtLogin.swift in Sources */,
 			);

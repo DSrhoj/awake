@@ -1,10 +1,19 @@
 import AppKit
 
 final class StatusItemController: NSObject {
+    private static let autoMissionControlKey = "autoDisableMissionControlWithKeepAwake"
+
     private let statusItem: NSStatusItem
     private let power = PowerAssertionManager()
     private let awakeTimer = AwakeSessionTimer()
+    private let missionControlGestures = MissionControlGestureOverride()
     private var countdownTimer: Timer?
+
+    /// When true, Mission Control swipe follows Keep Awake (on with override, off when released).
+    private var autoMissionControlWithKeepAwake: Bool {
+        get { UserDefaults.standard.bool(forKey: Self.autoMissionControlKey) }
+        set { UserDefaults.standard.set(newValue, forKey: Self.autoMissionControlKey) }
+    }
 
     override init() {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -23,6 +32,7 @@ final class StatusItemController: NSObject {
             if !self.power.isOverriding {
                 self.awakeTimer.stop()
             }
+            self.syncMissionControlWithKeepAwake()
             self.updateIcon()
             self.rebuildMenu()
         }
@@ -36,6 +46,10 @@ final class StatusItemController: NSObject {
             self?.power.releaseAll()
         }
 
+        missionControlGestures.onChange = { [weak self] in
+            self?.rebuildMenu()
+        }
+
         rebuildMenu()
     }
 
@@ -43,6 +57,7 @@ final class StatusItemController: NSObject {
         countdownTimer?.invalidate()
         awakeTimer.stop()
         power.releaseAll()
+        missionControlGestures.release()
         NSStatusBar.system.removeStatusItem(statusItem)
     }
 
@@ -123,6 +138,25 @@ final class StatusItemController: NSObject {
         menu.addItem(immediateItem(title: "Sleep Mac", action: #selector(sleepMac)))
 
         menu.addItem(.separator())
+
+        let missionItem = NSMenuItem(
+            title: "Disable Mission Control Swipe",
+            action: #selector(toggleMissionControlSwipe),
+            keyEquivalent: ""
+        )
+        missionItem.target = self
+        missionItem.state = missionControlGestures.isActive ? .on : .off
+        menu.addItem(missionItem)
+
+        let autoMissionItem = NSMenuItem(
+            title: "With Keep Awake",
+            action: #selector(toggleAutoMissionControlWithKeepAwake),
+            keyEquivalent: ""
+        )
+        autoMissionItem.target = self
+        autoMissionItem.state = autoMissionControlWithKeepAwake ? .on : .off
+        autoMissionItem.indentationLevel = 1
+        menu.addItem(autoMissionItem)
 
         let launchItem = NSMenuItem(
             title: "Launch at Login",
@@ -223,6 +257,24 @@ final class StatusItemController: NSObject {
         }
     }
 
+    @objc private func toggleMissionControlSwipe() {
+        missionControlGestures.setEnabled(!missionControlGestures.isActive)
+    }
+
+    @objc private func toggleAutoMissionControlWithKeepAwake() {
+        autoMissionControlWithKeepAwake.toggle()
+        if autoMissionControlWithKeepAwake {
+            syncMissionControlWithKeepAwake()
+        }
+        rebuildMenu()
+    }
+
+    /// When “With Keep Awake” is on, Mission Control swipe tracks power overrides.
+    private func syncMissionControlWithKeepAwake() {
+        guard autoMissionControlWithKeepAwake else { return }
+        missionControlGestures.setEnabled(power.isOverriding)
+    }
+
     @objc private func toggleLaunchAtLogin() {
         LaunchAtLogin.setEnabled(!LaunchAtLogin.isEnabled)
         rebuildMenu()
@@ -232,6 +284,7 @@ final class StatusItemController: NSObject {
         countdownTimer?.invalidate()
         awakeTimer.stop()
         power.releaseAll()
+        missionControlGestures.release()
         NSApp.terminate(nil)
     }
 }
