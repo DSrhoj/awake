@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 APP_NAME="Awake"
-VERSION="$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' Awake/Info.plist 2>/dev/null || echo "1.0.0")"
+VERSION="$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' Awake/Info.plist 2>/dev/null || echo "1.1.0")"
 DIST="$ROOT/dist"
 DERIVED="$ROOT/build/package"
 APP_SRC="$DERIVED/Build/Products/Release/${APP_NAME}.app"

@@ -103,7 +103,7 @@ Version comes from `CFBundleShortVersionString` in `Awake/Info.plist`.
 ### Publishing a GitHub Release
 
 1. Bump `CFBundleShortVersionString` / `CFBundleVersion` in `Awake/Info.plist`
-2. Commit and tag, e.g. `git tag v1.0.0 && git push --tags`
+2. Commit and tag, e.g. `git tag v1.1.0 && git push --tags`
 3. Run `./scripts/package.sh`
 4. Create a GitHub Release for the tag and attach `dist/Awake-*.zip` (and `.dmg` if present)
 
